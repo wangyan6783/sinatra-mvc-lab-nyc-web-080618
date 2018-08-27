@@ -4,8 +4,8 @@ class PigLatinizer
   def letters_to_words(word)
     @vowels = ["a", "e", "i", "o", "u"]
     letters = word.split("")
-    if word.start_with?("a", "e", "i", "o", "u", "I", "E", "O")
-      word+"way"
+    if word.start_with?("a", "e", "i", "o", "u", "A", "E", "I", "O", "U")
+      word + "way"
     elsif @vowels.include?(letters[1])
       letters.push(letters.shift).join("") + "ay"
     elsif @vowels.include?(letters[2])
